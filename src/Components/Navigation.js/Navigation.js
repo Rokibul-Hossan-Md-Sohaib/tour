@@ -3,10 +3,12 @@ import * as ReactBootstrap from 'react-bootstrap';
 import './Navigation.css'
 import imageA from '../../Images/image1.png'
 import imageB from '../../Images/image2.png'
-import imageC from '../../Images/image3.png'
+import imageC from '../../Images/image3.png';
+import videoA from '../../videos/v1.mp4';
+import videoB from '../../videos/v4.mp4';
 
 
-// import Card from '../Card/Card';
+import Card from '../Card/Card';
 import Footer from './Footer';
 export default function Navigation() {
   return (
@@ -19,6 +21,7 @@ export default function Navigation() {
           <ReactBootstrap.Navbar.Collapse id="basic-navbar-nav">
             <ReactBootstrap.Nav className="mr-auto nav">
               <ReactBootstrap.Nav.Link href="#home" >Sing In</ReactBootstrap.Nav.Link>
+
               <ReactBootstrap.Nav.Link href="#home" >Sing Up</ReactBootstrap.Nav.Link>
 
               <ReactBootstrap.NavDropdown title="Home" id="basic-nav-dropdown ">
@@ -46,12 +49,12 @@ export default function Navigation() {
           <ReactBootstrap.Row>
             <ReactBootstrap.Col className="videos" xs={6} md={4} sm={2}>
               <div>
-                <video src= {""} width="100%" height="42%"
+                <video src= {videoA} width="100%" height="42%"
                   controls="controls"
                   autoplay="true" />
               </div>
               <div className="vdo">
-                <video src={""} width="100%" height="42%"
+                <video src={videoB} width="100%" height="42%"
                   controls="controls"
                   autoplay="true" />
               </div>
@@ -111,7 +114,7 @@ export default function Navigation() {
         </ReactBootstrap.Container>
       </div>
       <div>
-      {/* <Card></Card> */}
+      <Card></Card>
         <Footer></Footer>
         
       </div>
