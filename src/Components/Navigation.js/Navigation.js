@@ -8,29 +8,33 @@ import videoA from '../../videos/v1.mp4';
 import videoB from '../../videos/v4.mp4';
 
 
+
 import Card from '../Card/Card';
 import Footer from './Footer';
 export default function Navigation() {
   return (
 
     <div>
+        {/* <nav className="Header">
+        <a href="/signin">Sign IN</a>
+        <a href="/home">Home</a>
+            
+        </nav> */}
       <div>
-        {/* navbar setion*/}
+      
         <ReactBootstrap.Navbar collapseOnSelect expand="lg" bg="rgb(2, 41, 41)" className="navbar" >
           <ReactBootstrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
           <ReactBootstrap.Navbar.Collapse id="basic-navbar-nav">
             <ReactBootstrap.Nav className="mr-auto nav">
-              <ReactBootstrap.Nav.Link href="#home" >Sing In</ReactBootstrap.Nav.Link>
-
-              <ReactBootstrap.Nav.Link href="#home" >Sing Up</ReactBootstrap.Nav.Link>
-
-              <ReactBootstrap.NavDropdown title="Home" id="basic-nav-dropdown ">
+              <ReactBootstrap.Nav.Link href="/signin" >Sing In</ReactBootstrap.Nav.Link>
+              {/* <ReactBootstrap.Nav.Link href="#home" >Sing Up</ReactBootstrap.Nav.Link> */}
+              <ReactBootstrap.NavDropdown title="Home" href="/home" id="basic-nav-dropdown ">
                 <div className="navdrop">
-                  <ReactBootstrap.NavDropdown.Item href="#action/3.1">Travel Plan</ReactBootstrap.NavDropdown.Item>
-                  <ReactBootstrap.NavDropdown.Item href="#action/3.2">Travel Wall</ReactBootstrap.NavDropdown.Item>
-                  <ReactBootstrap.NavDropdown.Item href="#action/3.3"> Mingle</ReactBootstrap.NavDropdown.Item>
-                  <ReactBootstrap.NavDropdown.Item href="#action/3.4"> Travel Memories</ReactBootstrap.NavDropdown.Item>
-                  <ReactBootstrap.NavDropdown.Item href="#action/3.4">Separated link</ReactBootstrap.NavDropdown.Item>
+                  <ReactBootstrap.NavDropdown.Item href="/action/3.1">Travel Plan</ReactBootstrap.NavDropdown.Item>
+                  <ReactBootstrap.NavDropdown.Item href="/action/3.2">Travel Wall</ReactBootstrap.NavDropdown.Item>
+                  <ReactBootstrap.NavDropdown.Item href="/action/3.3"> Mingle</ReactBootstrap.NavDropdown.Item>
+                  <ReactBootstrap.NavDropdown.Item href="/action/3.4"> Travel Memories</ReactBootstrap.NavDropdown.Item>
+                  <ReactBootstrap.NavDropdown.Item href="/action/3.4">Separated link</ReactBootstrap.NavDropdown.Item>
                 </div>
 
               </ReactBootstrap.NavDropdown>
@@ -48,15 +52,16 @@ export default function Navigation() {
         <ReactBootstrap.Container>
           <ReactBootstrap.Row>
             <ReactBootstrap.Col className="videos" xs={6} md={4} sm={2}>
-              <div>
-                <video src= {videoA} width="100%" height="42%"
-                  controls="controls"
+              <div className="vdo">
+                
+                 <video src= {videoA} width="100%" height="42%"
+                  controls="autoPlay"
                   autoplay="true" />
               </div>
               <div className="vdo">
                 <video src={videoB} width="100%" height="42%"
                   controls="controls"
-                  autoplay="true" />
+                  autoplay="true"/>
               </div>
             </ReactBootstrap.Col>
             <ReactBootstrap.Col xs={12} md={8}>
