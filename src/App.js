@@ -25,6 +25,9 @@ export default function App() {
                     <Route path="/home">
                     <Navigation></Navigation>
                     </Route>
+                    <Route path="/">
+                    <Navigation></Navigation>
+                    </Route>
                 </Switch>
             </Router>
           

@@ -1,0 +1,15 @@
+.ship-form{
+
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+.ship-form input{
+    display: block;
+    border-radius: 5px 8px 5px;
+    box-shadow: 9px 8px 6px -3px #FFF9C4;
+    padding: 3px;
+    margin-top: 2px;
+   width: 300px;
+    background-color: #A5D6A7;
+}
