@@ -6,9 +6,8 @@ import imageB from '../../Images/image2.png'
 import imageC from '../../Images/image3.png'
 
 
-
+// import Card from '../Card/Card';
 import Footer from './Footer';
-import Card from '../Card/Card';
 export default function Navigation() {
   return (
 
@@ -112,7 +111,7 @@ export default function Navigation() {
         </ReactBootstrap.Container>
       </div>
       <div>
-      <Card></Card>
+      {/* <Card></Card> */}
         <Footer></Footer>
         
       </div>
