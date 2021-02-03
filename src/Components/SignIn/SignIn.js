@@ -25,7 +25,9 @@ const SignIn = () => {
         <MDBRow className='d-flex align-items-center mb-4'>
                 <MDBCol md='6' className='text-center'>
                   <MDBBtn className='z-depth-1' gradient="aqua" rounded block>
-                    Sign In
+                  <a href='/register' className='blue-text ml-1'>
+                      Sign In
+                    </a>
                   </MDBBtn>
                 </MDBCol>
                 <MDBCol md='6' style={{fontWeight:"bold", fontSize:"20px"}}>

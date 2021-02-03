@@ -11,7 +11,9 @@ import {
 
 import SignIn from './Components/SignIn/SignIn';
 import Signup from './Components/Signup/Signup';
-import Profile from './Components/Profile/Profile';
+// import Profile from './Components/Profile/Profile';
+import Register from './Components/Register/Register';
+
 
 
 
@@ -31,8 +33,8 @@ export default function App() {
                     <Route path ="/signup" >
                         <Signup></Signup>
                     </Route>
-                    <Route path ="/profile" >
-                        <Profile></Profile>
+                    <Route path ="/register" >
+                     <Register></Register>
                     </Route>
                     <Route path="/">
                         <Navigation></Navigation>

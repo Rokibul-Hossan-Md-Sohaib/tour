@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
+
 import "./Signup.css"
 const Signup = () => {
   return (
@@ -18,7 +19,7 @@ const Signup = () => {
         <MDBRow className='d-flex align-items-center mb-4'>
                 <MDBCol md='6' className='text-center'>
                   <MDBBtn className='z-depth-1' gradient="purple" rounded block>
-                  <a href='/profile'>
+                  <a href='/register'>
                     Sign Up
                     </a>
                   </MDBBtn>
