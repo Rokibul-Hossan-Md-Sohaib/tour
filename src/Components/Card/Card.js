@@ -1,62 +1,124 @@
 import React from 'react';
-import { MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBCardText, MDBCardBody } from "mdbreact";
-
-import 'mdbreact/dist/css/mdb.css';
-import './Card.css';
-
-
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
+import imageA from '../../Images/image6.png'
+import imageB from '../../Images/image7.png'
+import imageC from '../../Images/image8.png';
+import "./Card.css"
 const Card = () => {
-    return (
-        <div>
-            <MDBCardGroup className='card'>
-                <MDBCard style={{ borderRadius: "40px 30px" }}>
-                    <MDBCardImage src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" alt="MDBCard image cap" top hover
-                        overlay="white-slight" />
-                    <MDBCardBody >
-                        <MDBCardTitle tag="h5">Panel title</MDBCardTitle>
-                        <MDBCardText>
-                            Some quick example text to build on the card title and make up
-                            the bulk of the card's content.
-          </MDBCardText>
-                        <MDBBtn color="primary" size="md sm">
-                            read more
-          </MDBBtn>
-                    </MDBCardBody>
-                </MDBCard>
+  return (
+    <MDBRow>
+      <MDBCol md='4'>
+        <MDBCard wide cascade>
+          <MDBView cascade>
+            <MDBCardImage
+              hover
+              overlay='white-slight'
+              className='card-img-top'
+              src={imageB}
+               alt='Card cap'
+            />
+          </MDBView>
 
-                <MDBCard style={{ borderRadius: "40px 30px" }}>
-                    <MDBCardImage src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" alt="MDBCard image cap" top hover
-                        overlay="white-slight" />
-                    <MDBCardBody>
-                        <MDBCardTitle tag="h5">Panel title</MDBCardTitle>
-                        <MDBCardText>
-                            Some quick example text to build on the card title and make up
-                            the bulk of the card's content.
-          </MDBCardText>
-                        <MDBBtn color="primary" size="md sm">
-                            read more
-          </MDBBtn>
-                    </MDBCardBody>
-                </MDBCard>
+          <MDBCardBody cascade className='text-center'>
+            <MDBCardTitle className='card-title'>
+              <strong>Alice Mayer</strong>
+            </MDBCardTitle>
 
-                <MDBCard style={{ borderRadius: "40px 30px" }}>
-                    <MDBCardImage src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" alt="MDBCard image cap" top hover
-                        overlay="white-slight" />
-                    <MDBCardBody>
-                        <MDBCardTitle tag="h5">Panel title</MDBCardTitle>
-                        <MDBCardText>
-                            Some quick example text to build on the card title and make up
-                            the bulk of the card's content.
-          </MDBCardText>
-                        <MDBBtn color="primary" size="md sm">
-                            read more
-          </MDBBtn>
-                    </MDBCardBody>
-                </MDBCard>
-            </MDBCardGroup>
+            <p className='font-weight-bold blue-text'>Photographer</p>
 
-        </div>
-    );
-};
+            <MDBCardText>
+              Sed ut perspiciatis unde omnis iste natus sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam.{' '}
+            </MDBCardText>
+
+            <MDBCol md='12' className='d-flex justify-content-center'>
+              <a href='!#' className='px-2 fa-lg li-ic'>
+                <MDBIcon fab icon='linkedin-in'></MDBIcon>
+              </a>
+
+              <a href='!#' className='px-2 fa-lg tw-ic'>
+                <MDBIcon fab icon='twitter'></MDBIcon>
+              </a>
+
+              <a href='!#' className='px-2 fa-lg fb-ic'>
+                <MDBIcon fab icon='facebook-f'></MDBIcon>
+              </a>
+            </MDBCol>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+
+      <MDBCol md='4'>
+        <MDBCard narrow>
+          <MDBView cascade>
+            <MDBCardImage
+              hover
+              overlay='white-slight'
+              className='card-img-top'
+              src={imageA}
+              alt='food'
+            />
+          </MDBView>
+
+          <MDBCardBody>
+            {/* <h5 className='pink-text'>
+              <MDBIcon icon='utensils' /> Culinary
+            </h5> */}
+
+            <MDBCardTitle className='font-weight-bold'>
+              Cheat day inspirations
+            </MDBCardTitle>
+
+            <MDBCardText>
+              Sed ut perspiciatis unde omnis iste natus sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam.
+            </MDBCardText>
+
+            <MDBBtn color='yellow'>Read More</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+
+      <MDBCol md='4'>
+        <MDBCard>
+          <MDBCardImage
+            hover
+            overlay='white-light'
+            className='card-img-top'
+            src={imageC}
+            alt='man'
+          />
+
+          <MDBCardBody cascade className='text-center'>
+            <MDBCardTitle className='card-title'>
+              <strong>Billy Coleman</strong>
+            </MDBCardTitle>
+
+            <p className='font-weight-bold blue-text'>Travelling</p>
+
+            <MDBCardText>
+              Sed ut perspiciatis unde omnis iste natus sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam.{' '}
+            </MDBCardText>
+
+            <MDBCol md='12' className='d-flex justify-content-center'>
+              <MDBBtn rounded floating color='fb'>
+                <MDBIcon size='lg' fab icon='facebook-f'></MDBIcon>
+              </MDBBtn>
+
+              <MDBBtn rounded floating color='tw'>
+                <MDBIcon size='lg' fab icon='twitter'></MDBIcon>
+              </MDBBtn>
+
+              <MDBBtn rounded floating color='dribbble'>
+                <MDBIcon size='lg' fab icon='dribbble'></MDBIcon>
+              </MDBBtn>
+            </MDBCol>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+    </MDBRow>
+  )
+}
 
 export default Card;

@@ -17,9 +17,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
+import TravelMemories from '@material-ui/icons/Theaters';
+import TravelWall from '@material-ui/icons/ChromeReaderMode';
+import Mingle from '@material-ui/icons/AirportShuttle';
+import TravelPlan from '@material-ui/icons/SupervisedUserCircle';
+import Home from '@material-ui/icons/HomeWork';
+import Settings from '@material-ui/icons/Settings';
 import MailIcon from '@material-ui/icons/Mail';
 import Profile from '../Profile/Profile';
-import { Link } from 'react-router-dom';
 import * as ReactBootstrap from 'react-bootstrap';
 import { Avatar } from '@material-ui/core';
 import imageR from "../../Images/rokib 2.jpg"
@@ -81,6 +86,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
   },
 }));
+function ListItemLink(props) {
+  return <ListItem button component="a" {...props} />;
+}
 
 export default function Register() {
   const classes = useStyles();
@@ -130,46 +138,55 @@ export default function Register() {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-         < Avatar alt="Remy Sharp" src={imageR} />
+            < Avatar alt="Remy Sharp" src={imageR} />
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
-        
-        <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <MailIcon> </MailIcon> <a target="_blank" href="">
-        <ReactBootstrap.NavDropdown title="More Options" href="/home" id="basic-nav-dropdown ">
-                            <div className="navdrop">
-                             <ReactBootstrap.NavDropdown.Item href="/action/3.1">Travel Plan</ReactBootstrap.NavDropdown.Item>
-                                    <ReactBootstrap.NavDropdown.Item href="/action/3.2">Travel Wall</ReactBootstrap.NavDropdown.Item>
-                                    <ReactBootstrap.NavDropdown.Item href="/action/3.3"> Mingle</ReactBootstrap.NavDropdown.Item>
-                                    <ReactBootstrap.NavDropdown.Item href="/action/3.4"> Travel Memories</ReactBootstrap.NavDropdown.Item>
-                                    <ReactBootstrap.NavDropdown.Item href="/action/3.4">Separated link</ReactBootstrap.NavDropdown.Item>
-                                </div>
 
-                            </ReactBootstrap.NavDropdown>
-                           
-    </a>  <MailIcon />
-        <Link href="#" >
-    Link
-  </Link>
+        <Divider />
+        <List>
+          <ListItemLink href="signin">
+            <ListItemIcon>
+              <TravelPlan />
+            </ListItemIcon>
+            <ListItemText primary="Travel Plan" />
+          </ListItemLink>
+          <ListItemLink href="signin">
+            <ListItemIcon>
+              <TravelWall />
+            </ListItemIcon>
+            <ListItemText primary="Travel Wall" />
+          </ListItemLink>
+          <ListItemLink href="signin">
+            <ListItemIcon>
+              <Mingle />
+            </ListItemIcon>
+            <ListItemText primary="Mingle" />
+          </ListItemLink>
+          <ListItemLink href="signin">
+            <ListItemIcon>
+              <TravelMemories />
+            </ListItemIcon>
+            <ListItemText primary="Travel Memories" />
+          </ListItemLink>
+
+        </List>
+        <Divider />
+        <List>
+        <ListItemLink href="/">
+            <ListItemIcon>
+              <Home />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItemLink>
+
+          <ListItemLink href="/">
+            <ListItemIcon>
+              <Settings />
+            </ListItemIcon>
+            <ListItemText primary="Settings" />
+          </ListItemLink>
+        </List>
       </Drawer>
       <main
         className={clsx(classes.content, {
@@ -177,7 +194,7 @@ export default function Register() {
         })}
       >
         <div className={classes.drawerHeader} />
-            <Profile></Profile>
+        <Profile></Profile>
       </main>
     </div>
   );
