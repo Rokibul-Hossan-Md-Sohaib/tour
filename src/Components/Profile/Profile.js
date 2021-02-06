@@ -70,9 +70,8 @@ const Profile = () => {
                 onChange={handleChange} /></Paper>
             </Grid>
             <Grid item xs={6}>
-
               <Paper className={classes.paper}> <MDBInput 
-              label="your country" 
+              label="Your country" 
               icon="flag" 
               group type="text" 
               validate error="wrong"
@@ -112,7 +111,7 @@ const Profile = () => {
               <Paper className={classes.paper}> <div>
                 <select class="custom-select" name="Goal" value={Goal} ref={register} 
                                  onChange={handleChange}  >
-                  <option selected>Options</option>
+                  <option selected>Goals</option>
                   <option value="Individual Travelers">Individual Travelers</option>
                   <option value="Travelers family">Travelers family</option>
                   <option value="Boys group">Boys group</option>

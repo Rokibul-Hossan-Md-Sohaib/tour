@@ -3,12 +3,13 @@ import * as ReactBootstrap from 'react-bootstrap';
 import { MDBCarousel, MDBCarouselInner,MDBCarouselCaption, MDBCarouselItem, MDBView, MDBContainer } from
 "mdbreact"
 import './Navigation.css'
-import imageA from '../../Images/image1.png'
-import imageB from '../../Images/image2.png'
-import imageC from '../../Images/image3.png';
+// import imageA from '../../Images/image1.png'
+// import imageB from '../../Images/image2.png'
+// import imageC from '../../Images/image3.png';
 import videoA from '../../videos/v1.mp4';
 import videoB from '../../videos/v4.mp4';
 import logo from '../../Images/trip.png'
+import logo2 from '../../Images/favicon.png'
 
 
 
@@ -17,10 +18,10 @@ import Footer from './Footer';
 export default function Navigation() {
     return (
         <div>
+          
             <div>
             <img src={logo} style={{width:"100%", height:"15vw"}} alt=""/>
             <ReactBootstrap.Navbar bg="dark" variant="dark">
-           
                 <nav className ="nav">
                     <a href="/home">Home</a>
                     <a href="/">Travel Plan</a>
@@ -28,8 +29,9 @@ export default function Navigation() {
                     <a href="/">Mingle</a>
                     <a href="/">Travel Memories</a>
                     <a className="signin" href="/signin">Sign In</a>
-                    <img src={logo} style={{width:"33px", height:"30px", marginTop:"10px" , marginLeft:"15px"}} alt=""/>
+                    <img src={logo2}  alt=""/>
                 </nav>
+              
     {/* <ReactBootstrap.Navbar.Brand href="#home">Navbar</ReactBootstrap.Navbar.Brand>
     <ReactBootstrap.Nav className="mr-auto">
       <ReactBootstrap.Nav.Link href="#home">Home</ReactBootstrap.Nav.Link>
@@ -43,6 +45,7 @@ export default function Navigation() {
     {/* </ReactBootstrap.Form> */}
   </ReactBootstrap.Navbar>
             </div>
+           
 
             {/* images and videos setion */}
             <div>

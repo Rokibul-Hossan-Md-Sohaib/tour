@@ -24,14 +24,14 @@ const Card = () => {
               <strong>Alice Mayer</strong>
             </MDBCardTitle>
 
-            <p className='font-weight-bold blue-text'>Photographer</p>
+            <p className='font-weight-bold blue-text'>Boat Ride</p>
 
             <MDBCardText>
               Sed ut perspiciatis unde omnis iste natus sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam.{' '}
             </MDBCardText>
 
-            <MDBCol md='12' className='d-flex justify-content-center'>
+            {/* <MDBCol md='12' className='d-flex justify-content-center'>
               <a href='!#' className='px-2 fa-lg li-ic'>
                 <MDBIcon fab icon='linkedin-in'></MDBIcon>
               </a>
@@ -43,7 +43,7 @@ const Card = () => {
               <a href='!#' className='px-2 fa-lg fb-ic'>
                 <MDBIcon fab icon='facebook-f'></MDBIcon>
               </a>
-            </MDBCol>
+            </MDBCol> */}
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
@@ -101,7 +101,7 @@ const Card = () => {
               accusantium doloremque laudantium, totam rem aperiam.{' '}
             </MDBCardText>
 
-            <MDBCol md='12' className='d-flex justify-content-center'>
+            {/* <MDBCol md='12' className='d-flex justify-content-center'>
               <MDBBtn rounded floating color='fb'>
                 <MDBIcon size='lg' fab icon='facebook-f'></MDBIcon>
               </MDBBtn>
@@ -113,7 +113,7 @@ const Card = () => {
               <MDBBtn rounded floating color='dribbble'>
                 <MDBIcon size='lg' fab icon='dribbble'></MDBIcon>
               </MDBBtn>
-            </MDBCol>
+            </MDBCol> */}
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
