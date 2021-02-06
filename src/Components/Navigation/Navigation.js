@@ -99,6 +99,13 @@ export default function Navigation() {
                 alt="Second slide"
               />
             </MDBView>
+            <MDBCarouselCaption>
+            <h2>Iceland</h2>
+            <p>Iceland, a Nordic island nation, is defined by its dramatic landscape with volcanoes, geysers,
+               hot springs and lava fields.
+               Massive glaciers are protected in Vatnajökull and Snæfellsjökull national parks.
+            </p>
+          </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView className="view">
@@ -108,6 +115,14 @@ export default function Navigation() {
                 alt="Third slide"
               />
             </MDBView>
+            <MDBCarouselCaption>
+            <h2>Road-Tripping</h2>
+            <p>Avoiding fatigue is very important to ensure a safe drive. 
+              Use pit stops for more than taking a loo break, and take them frequently. 
+              Stop only at spots where the road is wide and you can pull into the shoulder
+            </p>
+          </MDBCarouselCaption>
+            
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>
