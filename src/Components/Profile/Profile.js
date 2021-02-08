@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Avatar, TextField } from "@material-ui/core";
+import './Profile.css'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +42,7 @@ const Profile = () => {
   const classes = useStyles();
   return (
 
-    <div>
+    <div  >
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={classes.root}>
           <Grid container spacing={3}>
@@ -180,11 +181,12 @@ const Profile = () => {
 
           </Grid>
           <div className="text-center">
-                <MDBBtn outline color="secondary" type="submit">
+                <MDBBtn outline color="secondary" type="submit" >
                  Register
             <MDBIcon far icon="paper-plane" className="ml-1" />
                 </MDBBtn>
               </div>
+            
         </div>
       </form>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle,
+   MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
 import imageA from '../../Images/image6.png'
 import imageB from '../../Images/image7.png'
 import imageC from '../../Images/image8.png';

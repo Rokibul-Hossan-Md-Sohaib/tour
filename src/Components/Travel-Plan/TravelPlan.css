@@ -1,0 +1,10 @@
+.box{
+    justify-content: center;
+    align-items: center;
+}
+.navbb{
+    background-color: black;
+}
+.label{
+    color: orange;
+}

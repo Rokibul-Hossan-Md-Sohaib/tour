@@ -24,7 +24,7 @@ export default function Navigation() {
             <ReactBootstrap.Navbar bg="dark" variant="dark">
                 <nav className ="nav">
                     <a href="/home">Home</a>
-                    <a href="/">Travel Plan</a>
+                    <a href="/travelplan">Travel Plan</a>
                     <a href="/">Travel Wall</a>
                     <a href="/">Mingle</a>
                     <a href="/">Travel Memories</a>
