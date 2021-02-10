@@ -7,30 +7,21 @@ import * as ReactBootstrap from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 class TravelPlan extends Component {
+  constructor(){
+    super()
+    this.state={
+      show:true
+    }
+  }
+operation(){
+  this.setState({
+    show:false
+  })
+}
+
 state = {
   activeItemJustified: "1",
-  options: [
-    {
-      text: "Option 1",
-      value: "1"
-    },
-    {
-      text: "Option 2",
-      value: "2"
-    },
-    {
-      text: "Option 3",
-      value: "3"
-    },
-    {
-      text: "Option 4",
-      value: "4"
-    },
-    {
-      text: "Option 5",
-      value: "5"
-    }
-  ]
+ 
 }
 
 toggleJustified = tab => e => {
@@ -68,9 +59,12 @@ render() {
           activeItem={this.state.activeItemJustified}
         >
           <MDBTabPane tabId="1" role="tabpanel">
+        
             <div className="mt-7">
-            <MDBContainer>
-            
+              <div >
+               
+      <MDBContainer>
+            {this.state.show?
       <MDBRow>
         <MDBCol md='12'>
           <MDBCard>
@@ -176,19 +170,23 @@ render() {
                 </div>
               </div>
               <MDBRow className='d-flex align-items-center mb-4'>
-                <MDBCol md='12' className='text-center'>
-                <MDBBtn className='z-depth-1' gradient="aqua" rounded block >
+                <MDBCol md='6' className='text-center'>
+                <MDBBtn  className='z-depth-1' gradient="aqua" rounded block onClick={()=>this.operation()} >
                     Post Plan Request
                   </MDBBtn>
-                </MDBCol>
-                
+                </MDBCol>         
               </MDBRow>
+             
             </MDBCardBody>
             
           </MDBCard>
         </MDBCol>
       </MDBRow>
+     : 
+     <div>success</div>
+    }    
     </MDBContainer>
+    </div>
             </div>
           </MDBTabPane>
           <MDBTabPane tabId="2" role="tabpanel">

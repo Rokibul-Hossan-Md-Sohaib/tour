@@ -1,0 +1,13 @@
+.item{
+    display: "flex";
+    margin-left: 35%;
+ 
+}
+
+.input:before{
+    justify-content: center;
+    align-items: center;
+    content: "Share a photo ";
+    color: green;
+    font-weight: bold;
+}

@@ -1,6 +1,10 @@
 
+  .cards{
+   height: 700px;
+   background-color: #E65100;
+}
 .card{
-   margin-top: 30px;
+   margin-top: 50px;
     margin-left: 50px;
     
     margin-bottom: 10px;
@@ -14,3 +18,4 @@
     border-radius: 5px 20px 5px;
        box-shadow: 9px 10px 8px -2px#838586;
    }
+ 

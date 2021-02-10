@@ -6,18 +6,20 @@ import 'mdbreact/dist/css/mdb.css'; //eta index.js e chilo ekhne ansi cz navbar 
 
 const Footer = () => {
     return (
-        <div>
-            <MDBFooter color="" className="font-small pt-4 mt-4 footer">
+   <div className="footer">
+            <MDBFooter  
+            // color="" className="font-small pt-4 mt-4 footer"
+            >
                 <MDBContainer fluid className="text-center text-md-left">
-                    <MDBRow>
-                        <MDBCol md="6" style={{ color: "#FF6F00"}}>
+                    <MDBRow >
+                        <MDBCol md="6" style={{ color: "#FF6F00" , marginTop:"20px"}}>
                             <h5 className="title">Travel Content</h5>
                             <p>
                                 Contact us through This Link
             </p>
                         </MDBCol>
                         <MDBCol md="6">
-                            <h5 className="title"style={{ color: "#FF6F00"}} >Contact Us</h5>
+                            <h5 className="title"style={{ color: "#FF6F00" , marginTop:"15px"}} >Contact Us</h5>
                             <ul>
                                 <li className="list-unstyled" style={{ color: "#FF6F00", fontSize: "30px" }}>
                                     <a href="#!"><i class="fab fa-facebook-square"></i></a>
@@ -41,7 +43,7 @@ const Footer = () => {
                     </MDBContainer>
                 </div>
             </MDBFooter>
-        </div>
+            </div>
     );
 };
 

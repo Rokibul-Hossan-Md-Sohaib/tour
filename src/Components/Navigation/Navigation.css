@@ -8,6 +8,10 @@ body{
     
 }
 /* transparent */
+.firstportion{
+    background-color: #212121;
+    height: 650px;
+}
 @media screen and (max-width: 600px) {
     .nav.responsive {position: relative;}
     .nav.responsive a.icon {
@@ -38,7 +42,7 @@ nav img{
     height: 60px;
 }
 .signin{
-margin-left: 12em;
+margin-left: 25em;
 }
 
 .image{

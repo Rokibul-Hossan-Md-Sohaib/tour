@@ -7,6 +7,7 @@ import imageC from '../../Images/image8.png';
 import "./Card.css"
 const Card = () => {
   return (
+    <div className="cards">
     <MDBRow>
       <MDBCol md='4'>
         <MDBCard wide cascade>
@@ -119,6 +120,7 @@ const Card = () => {
         </MDBCard>
       </MDBCol>
     </MDBRow>
+    </div>
   )
 }
 

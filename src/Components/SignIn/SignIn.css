@@ -31,3 +31,10 @@
   .forgot-password a {
     color: #167bff;
   } */
+
+  .header{
+    text-decoration: orangered;
+    color: orangered;
+    font-size: 20px;
+    font-weight: bold;
+  }

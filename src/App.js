@@ -14,6 +14,7 @@ import Signup from './Components/Signup/Signup';
 // import Profile from './Components/Profile/Profile';
 import Register from './Components/Register/Register';
 import TravelPlan from './Components/Travel-Plan/TravelPlan';
+import TravelWall from './Components/Travel-Wall/TravelWall';
 
 
 
@@ -39,6 +40,9 @@ export default function App() {
                     </Route>
                     <Route path="/travelplan">
                        <TravelPlan></TravelPlan>
+                    </Route>
+                    <Route path="/travelwall">
+                        <TravelWall></TravelWall>
                     </Route>
                     <Route path="/">
                         <Navigation></Navigation>

@@ -28,6 +28,8 @@ import Profile from '../Profile/Profile';
 import * as ReactBootstrap from 'react-bootstrap';
 import { Avatar } from '@material-ui/core';
 import imageR from "../../Images/rokib 2.jpg"
+
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -123,7 +125,7 @@ export default function Register() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Crate Profile
+            Profile
           </Typography>
         </Toolbar>
       </AppBar>
@@ -145,25 +147,25 @@ export default function Register() {
 
         <Divider />
         <List>
-          <ListItemLink href="signin">
+          <ListItemLink href="/travelplan">
             <ListItemIcon>
               <TravelPlan />
             </ListItemIcon>
             <ListItemText primary="Travel Plan" />
           </ListItemLink>
-          <ListItemLink href="signin">
+          <ListItemLink href="/travelwall">
             <ListItemIcon>
               <TravelWall />
             </ListItemIcon>
             <ListItemText primary="Travel Wall" />
           </ListItemLink>
-          <ListItemLink href="signin">
+          <ListItemLink href="/mingle">
             <ListItemIcon>
               <Mingle />
             </ListItemIcon>
             <ListItemText primary="Mingle" />
           </ListItemLink>
-          <ListItemLink href="signin">
+          <ListItemLink href="/travelmemories">
             <ListItemIcon>
               <TravelMemories />
             </ListItemIcon>
@@ -173,9 +175,10 @@ export default function Register() {
         </List>
         <Divider />
         <List>
-        <ListItemLink href="/">
+          <ListItemLink href="/">
             <ListItemIcon>
               <Home />
+
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItemLink>

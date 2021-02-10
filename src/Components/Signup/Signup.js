@@ -10,7 +10,7 @@ const Signup = () => {
   <MDBRow>
     <MDBCol md="6">
       <form>
-        <p className="h5 text-center mb-4"  style={{fontWeight:"bold", fontSize:"30px"}}>Sign Up</p>
+        <p className="h5 text-center mb-4"  style={{fontWeight:"bold", fontSize:"30px",color:"blue"}}>Sign Up</p>
         <div className="grey-text">
           <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong"
             success="right" />
@@ -18,7 +18,7 @@ const Signup = () => {
         </div>
         <MDBRow className='d-flex align-items-center mb-4'>
                 <MDBCol md='6' className='text-center'>
-                  <MDBBtn className='z-depth-1' gradient="purple" rounded block>
+                  <MDBBtn className='z-depth-1 header' gradient="purple" rounded block>
                   <a href='/register'>
                     Sign Up
                     </a>

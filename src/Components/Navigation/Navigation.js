@@ -25,7 +25,7 @@ export default function Navigation() {
                 <nav className ="nav">
                     <a href="/home">Home</a>
                     <a href="/travelplan">Travel Plan</a>
-                    <a href="/">Travel Wall</a>
+                    <a href="/travelwall">Travel Wall</a>
                     <a href="/">Mingle</a>
                     <a href="/">Travel Memories</a>
                     <a className="signin" href="/signin">Sign In</a>
@@ -48,7 +48,7 @@ export default function Navigation() {
            
 
             {/* images and videos setion */}
-            <div>
+            <div className="firstportion">
                 <ReactBootstrap.Container>
                     <ReactBootstrap.Row>
                         <ReactBootstrap.Col className="videos" xs={6} md={4} sm={2}>
@@ -65,7 +65,6 @@ export default function Navigation() {
                             </div>
                         </ReactBootstrap.Col>
                         <ReactBootstrap.Col xs={12} md={8}>
-
                         <MDBContainer>
       <MDBCarousel
         activeItem={1}
@@ -127,7 +126,6 @@ export default function Navigation() {
         </MDBCarouselInner>
       </MDBCarousel>
     </MDBContainer>
-  
                         </ReactBootstrap.Col>
                     </ReactBootstrap.Row>
                 </ReactBootstrap.Container>
@@ -135,9 +133,7 @@ export default function Navigation() {
             <div>
                 <Card></Card>
                 <Footer></Footer>
-
             </div>
-
         </div>
     )
 }

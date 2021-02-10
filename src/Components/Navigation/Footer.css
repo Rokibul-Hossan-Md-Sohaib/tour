@@ -1,4 +1,7 @@
 .footer{
-    margin: 20px 20px 20px 20px;
-    background-color: black;
+  
+    background-color: #212121;
+}
+.text{
+    margin-top: 20px;
 }

@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { Avatar, TextField } from "@material-ui/core";
 import './Profile.css'
 
+import * as ReactBootstrap from 'react-bootstrap';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,10 +20,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const Profile = () => {
-  const [user, setUser] = useState({ name: "", country: " ", file: "", massage: "", gender: "" ,
-  date:"",Goal:"",interest:"",area:"",education:"",password:"",address:""});
+  const [user, setUser] = useState({
+    name: "", country: " ", file: "", massage: "", gender: "",
+    date: "", Goal: "", interest: "", area: "", education: "", password: "", address: ""
+  });
 
-  const { name, country, file, gender, massage,date ,Goal,interest,area,education,password,address} = user;
+  const { name, country, file, gender, massage, date, Goal, interest, area, education, password, address } = user;
   const { register, handleSubmit } = useForm();
   const handleChange = (e) => {
     console.log(e.target.file)
@@ -43,51 +46,52 @@ const Profile = () => {
   return (
 
     <div  >
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={classes.root}>
           <Grid container spacing={3}>
             <Grid item md={8} style={{ display: "block", marginRight: "auto", marginLeft: "auto" }}>
-              <Paper className={classes.paper}> <MDBInput 
+              <Paper className={classes.paper}> <MDBInput
                 label="Your name"
                 icon="user"
                 group type="text"
                 validate error="wrong"
-                success="right" 
+                success="right"
                 name="name"
                 id="name"
                 value={name}
                 onChange={handleChange} /></Paper>
             </Grid>
             <Grid item xs={6}>
-              <Paper className={classes.paper}> <MDBInput 
-              label="Your address"
-               icon="user"
-                group type="text" 
+              <Paper className={classes.paper}> <MDBInput
+                label="Your address"
+                icon="user"
+                group type="text"
                 validate error="wrong"
                 success="right"
-                 name="address"
+                name="address"
                 id="address"
                 value={address}
                 onChange={handleChange} /></Paper>
             </Grid>
             <Grid item xs={6}>
-              <Paper className={classes.paper}> <MDBInput 
-              label="Your country" 
-              icon="flag" 
-              group type="text" 
-              validate error="wrong"
-              success="right" 
-              name="country"
-              id="country"
-              value={country}
-              onChange={handleChange} /> </Paper>
+              <Paper className={classes.paper}> <MDBInput
+                label="Your country"
+                icon="flag"
+                group type="text"
+                validate error="wrong"
+                success="right"
+                name="country"
+                id="country"
+                value={country}
+                onChange={handleChange} /> </Paper>
 
             </Grid>
             <Grid item xs={6} sm={3}>
               <Paper className={classes.paper}>   <TextField
-              name="date" value={date} ref={register} 
-               onChange={handleChange}
-              id="date"
+                name="date" value={date} ref={register}
+                onChange={handleChange}
+                id="date"
                 label="Birthday"
                 type="date"
                 defaultValue="2017-05-24"
@@ -99,8 +103,8 @@ const Profile = () => {
             </Grid>
             <Grid item xs={6} sm={3}>
               <Paper className={classes.paper}> <div>
-                <select class="custom-select" name="gender" value={gender} ref={register} 
-                                 onChange={handleChange} success="right" >
+                <select class="custom-select" name="gender" value={gender} ref={register}
+                  onChange={handleChange} success="right" >
                   <option selected>Gender</option>
                   <option value="female">female</option>
                   <option value="male">male</option>
@@ -110,8 +114,8 @@ const Profile = () => {
             </Grid>
             <Grid item xs={6} sm={3}>
               <Paper className={classes.paper}> <div>
-                <select class="custom-select" name="Goal" value={Goal} ref={register} 
-                                 onChange={handleChange}  >
+                <select class="custom-select" name="Goal" value={Goal} ref={register}
+                  onChange={handleChange}  >
                   <option selected>Goals</option>
                   <option value="Individual Travelers">Individual Travelers</option>
                   <option value="Travelers family">Travelers family</option>
@@ -124,7 +128,7 @@ const Profile = () => {
             <Grid item xs={6} sm={3}>
               <Paper className={classes.paper}> <div>
                 <select class="custom-select" name="interest" value={interest} ref={register}
-                               onChange={handleChange} success="right" >
+                  onChange={handleChange} success="right" >
                   <option selected>Personal Interest</option>
                   <option value="female">Music</option>
                   <option value="male">Traveling</option>
@@ -136,8 +140,8 @@ const Profile = () => {
             </Grid>
             <Grid item xs={6} sm={3} style={{ display: "block", marginTop: "25px", marginRight: "auto", marginLeft: "auto" }}>
               <Paper className={classes.paper}> <div>
-                <select class="custom-select" name="area" value={area} ref={register} 
-                              onChange={handleChange} success="right" >
+                <select class="custom-select" name="area" value={area} ref={register}
+                  onChange={handleChange} success="right" >
                   <option selected>Personal Interest</option>
                   <option value="female">Art</option>
                   <option value="male">Heritage</option>
@@ -148,47 +152,48 @@ const Profile = () => {
               </div></Paper>
             </Grid>
             <Grid item xs={12} sm={6} >
-              <Paper className={classes.paper}> <MDBInput 
+              <Paper className={classes.paper}> <MDBInput
                 type="textarea"
-               rows="2"
+                rows="2"
                 label="Your Travel Motto"
-                icon="pencil-alt" 
+                icon="pencil-alt"
                 name="massage"
                 id="massage"
                 value={massage}
                 onChange={handleChange} /></Paper>
             </Grid>
-            <Grid item xs={12} sm={6} >
-              <Paper className={classes.paper}> <MDBInput 
-              group type="text" 
-              label="Education" 
-              icon="book-open" 
-              name="education"
-              id="education"
-              value={education}
-              onChange={handleChange} /></Paper>
+            <Grid item md={8} style={{ display: "block", marginRight: "auto", marginLeft: "auto" }}>
+              <Paper className={classes.paper}> <MDBInput
+                group type="text"
+                label="Education"
+                icon="book-open"
+                name="education"
+                id="education"
+                value={education}
+                onChange={handleChange} /></Paper>
             </Grid>
-            <Grid item xs={12} sm={6} >
-              <Paper className={classes.paper}>  <MDBInput 
+            {/* <Grid item xs={12} sm={6} >
+              <Paper className={classes.paper}>  <MDBInput
                 label="Your password"
                 icon="lock"
-                group type="password" 
+                group type="password"
                 id="education"
                 value={password}
                 onChange={handleChange}
-                /> </Paper>
-            </Grid>
+              /> </Paper>
+            </Grid> */}
 
           </Grid>
           <div className="text-center">
-                <MDBBtn outline color="secondary" type="submit" >
-                 Register
+            <MDBBtn outline color="secondary" type="submit" >
+              Register
             <MDBIcon far icon="paper-plane" className="ml-1" />
-                </MDBBtn>
-              </div>
-            
+            </MDBBtn>
+          </div>
+
         </div>
       </form>
+
     </div>
 
   );
